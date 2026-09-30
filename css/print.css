@@ -1,0 +1,39 @@
+/* ============================================================
+   ContractCraft — print / PDF stylesheet
+   "Download PDF" renders only the generated document.
+   The watermark is part of the cloned paper node, so a locked
+   preview still prints watermarked; unlocked prints are clean
+   (main.js removes .paper-wm for licensed users).
+   ============================================================ */
+
+@media print {
+  html, body {
+    background: #fff !important;
+    margin: 0 !important; padding: 0 !important;
+  }
+
+  /* Hide the entire app UI; show only the print mount. */
+  body > *:not(#printMount) { display: none !important; }
+
+  #printMount { display: block !important; }
+
+  #printMount .paper {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0.35in 0.15in !important;
+    font-size: 12.2pt !important;
+    line-height: 1.62 !important;
+  }
+  #printMount .paper p { orphans: 3; widows: 3; }
+  #printMount .doc-h { break-after: avoid; page-break-after: avoid; }
+  #printMount .doc-title { font-size: 17pt !important; }
+  #printMount .doc-kv { font-size: 9.5pt !important; }
+  #printMount .doc-sig { break-inside: avoid; page-break-inside: avoid; }
+
+  @page { margin: 0.85in; }
+}

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContractCraft — Freelance Contract Generator | Get Paid On Time</title>
+  <meta name="description" content="Generate a professional freelance contract in minutes. Full preview free, watermark-free download for $19 once — no subscription. Includes IP-on-payment, late fees, kill fee and more.">
+
+  <!-- OWNER TODO: replace patrickltl.github.io/contractcraft with your real domain (also in js/config.js, sitemap.xml, robots.txt) -->
+  <link rel="canonical" href="https://patrickltl.github.io/contractcraft/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ContractCraft">
+  <meta property="og:title" content="Freelance Contract Generator — get paid on time, starting with a real contract">
+  <meta property="og:description" content="A professional freelance / independent contractor agreement generated from your details in minutes. Free watermarked preview; $19 one-time unlock. No subscription.">
+  <meta property="og:url" content="https://patrickltl.github.io/contractcraft/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Freelance Contract Generator — get paid on time">
+  <meta name="twitter:description" content="Professional freelance contract, generated in minutes. Pay once, editable, no subscription.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232563EB'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='bold' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ContractCraft",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Freelance contract generator: create a professional independent contractor / freelance services agreement, mutual NDA, and statement of work from your project details. Free watermarked preview, one-time payment to download.",
+    "url": "https://patrickltl.github.io/contractcraft/",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Single contract unlock",
+        "price": "19.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Bundle: agreement + NDA + statement of work",
+        "price": "29.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is ContractCraft legal advice?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. ContractCraft is a template tool, not a law firm and not legal advice. It produces a professionally structured freelance contract from information you provide, and it includes the same prominent disclaimer every serious competitor uses. For high-stakes engagements, have an attorney review your contract for your situation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a freelance contract legally binding?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A contract becomes binding when both parties agree to its terms and sign it, whether on paper or electronically. ContractCraft produces the document; what makes it binding is the offer, acceptance, and consideration between you and your client. Clear terms and signatures are exactly why a written agreement beats a handshake." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a freelance contract and an independent contractor agreement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "They overlap heavily. An independent contractor agreement focuses on the working relationship (contractor status, tax responsibility, no employment benefits). A freelance services agreement focuses on the work itself (services, deliverables, revisions, payment). ContractCraft's document does both: it opens as a freelance services agreement and contains a full independent contractor status clause." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a contract for small projects?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Small projects go wrong too, and a short signed agreement costs you minutes to create. Most freelancers who get stiffed were not doing big deals — they just had nothing in writing. Use your judgment for trivial favors, but any engagement with real money and real deadlines deserves a contract." }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment terms should I use as a freelancer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Net 14 is a reasonable default; Net 7 for short projects. For larger fixed-fee work, 50% upfront is the single most effective protection against non-payment — clients who pay a deposit rarely disappear. ContractCraft also lets you add a monthly late fee, which both deters late payment and gives you a clean basis for charging it." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I edit the contract after generating it?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. After unlocking, you can switch the document into an editable text view, adjust any clause, and download the edited version. The downloaded HTML, Markdown, and plain-text files are yours to keep and modify forever — there is no subscription and no per-download limit." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a kill fee and why should my contract have one?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A kill fee compensates you when a client cancels mid-project after you reserved time for them. ContractCraft's clause makes the client pay for all work performed plus a percentage (you choose, 25% is common) of the remaining fee. It filters out casual cancellations and keeps your calendar respected." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the work if the client hasn't paid yet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Under ContractCraft's intellectual property clause, ownership of the final deliverables transfers to the client only upon full payment. Until then, you retain all rights and the client has no license to use the work. This single protection — IP assignment on payment — is the strongest anti-non-payment lever a freelance contract gives you." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div id="demoBanner" class="demo-banner" role="status"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">C</span><span id="brandName">ContractCraft</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a class="nav-link" href="#why">Why</a>
+      <a class="nav-link" href="#how">How it works</a>
+      <a class="nav-link" href="#inside">What&rsquo;s inside</a>
+      <a class="nav-link" href="#generator">Generator</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <button class="btn btn-sm nav-unlock" id="navUnlock" type="button">Unlock &mdash; $19</button>
+    </nav>
+    <button id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Freelance Contract Generator &mdash; get paid on time, <span class="accent">starting with a real contract</span></h1>
+      <p class="sub">Answer a few questions, preview a professional independent contractor agreement built for freelancers &mdash; IP on payment, late fees, kill fee, revisions, termination. Full preview free. Download clean files for <strong>$19 once</strong>. No subscription, ever.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-lg" href="#generator">Build my contract &mdash; free</a>
+        <a class="btn btn-lg btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip">Pay once, keep forever</span>
+        <span class="chip">Editable after download</span>
+        <span class="chip">Agreement + NDA + SOW in the bundle</span>
+        <span class="chip">Works offline in your browser</span>
+      </div>
+      <p class="hero-note"><strong>Template tool, not legal advice.</strong> ContractCraft generates professionally structured contract templates from information you provide. It is not a law firm and does not provide legal advice &mdash; have an attorney review for your situation.</p>
+    </div>
+  </section>
+
+  <!-- ============ PAIN ============ -->
+  <section id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why this exists</p>
+      <h2 class="sec-title">Most freelancers don&rsquo;t get stiffed because the client is evil.<br>They get stiffed because nothing was in writing.</h2>
+      <p class="sec-sub">Roughly 64&nbsp;million Americans freelance, and &ldquo;client won&rsquo;t pay, there was no contract&rdquo; is one of the most repeated stories on every freelance forum and subreddit. The pattern is always the same:</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">1</div>
+          <h3>Scope quietly grows</h3>
+          <p>&ldquo;One tiny extra revision&rdquo; becomes five, the deadline holds, your rate doesn&rsquo;t. Without a revisions clause there is no line between &ldquo;included&rdquo; and &ldquo;billable.&rdquo; The contract below includes a fixed number of revision rounds and a written change-order requirement.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">2</div>
+          <h3>Invoices drift</h3>
+          <p>Thirty days becomes ninety. Without agreed payment terms and a late-fee clause, &ldquo;I&rsquo;ll pay next week&rdquo; is just an opinion. The contract below sets the terms (Net 7/14/30 or 50% upfront), adds monthly interest on overdue amounts, and lets you pause work after notice.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">3</div>
+          <h3>The work leaves anyway</h3>
+          <p>The worst outcome: the client never pays &mdash; then uses the work regardless. The IP clause below transfers ownership of deliverables <strong>only on full payment</strong>. Until then, you own everything. Unpaid invoice, no license. That is leverage.</p>
+        </div>
+      </div>
+      <p class="sec-sub" style="margin-top:26px; margin-bottom:0;">Subscriptions &ldquo;solve&rdquo; this for $25/month. Static template files sell by the thousands on marketplaces &mdash; but a form letter written for someone else&rsquo;s project is exactly how clauses contradict each other. ContractCraft builds the document around <em>your</em> project details, shows you the entire text for free, and charges once.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOW ============ -->
+  <section id="how" class="section-alt">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2 class="sec-title">From blank page to signed in three steps</h2>
+      <p class="sec-sub">Everything runs in your browser. Your project details never leave your computer.</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="step-num" aria-hidden="true">1</div>
+          <h3>Fill in the project details</h3>
+          <p>Names, services, deliverables, dates, rate, payment terms, revisions, kill fee, governing law. Sensible defaults are pre-filled, and your draft autosaves locally as you type.</p>
+        </div>
+        <div class="card">
+          <div class="step-num" aria-hidden="true">2</div>
+          <h3>Preview the full contract, free</h3>
+          <p>The complete agreement renders instantly as a formatted document &mdash; every clause visible, nothing hidden behind a paywall. The bundle adds a mutual NDA and a statement-of-work template.</p>
+        </div>
+        <div class="card">
+          <div class="step-num" aria-hidden="true">3</div>
+          <h3>Unlock once, download clean</h3>
+          <p>One payment unlocks watermark-free HTML, Markdown, plain text, and print-to-PDF. Edit any clause before downloading. The files are yours to reuse forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S INSIDE ============ -->
+  <section id="inside">
+    <div class="wrap">
+      <p class="eyebrow">What&rsquo;s inside</p>
+      <h2 class="sec-title">Clause by clause, the protections freelancers actually need</h2>
+      <p class="sec-sub">Every clause below is in the generated agreement. Conditional sections are included or dropped based on your answers, and numbering adjusts automatically.</p>
+      <ul class="clause-list">
+        <li><span class="tick">&#10003;</span><span><b>Services</b> &mdash; a written description of the engagement, so scope arguments end before they start.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Deliverables &amp; timeline</b> &mdash; itemized deliverables, start/end dates, client feedback obligations.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Fees &amp; payment</b> &mdash; hourly or fixed, your currency, Net 7/14/30 or 50% upfront, no set-off.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Late fees</b> &mdash; monthly interest on overdue invoices plus the right to pause work after notice.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Revisions &amp; scope changes</b> &mdash; N included rounds; everything else needs a signed change order.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Kill fee</b> &mdash; cancellation compensation when a client cancels after you reserved capacity.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Confidentiality</b> &mdash; mutual protection of business information (toggle it on or off).</span></li>
+        <li><span class="tick">&#10003;</span><span><b>IP assignment on full payment</b> &mdash; client owns the work only after the invoice clears. The big one.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Independent contractor status</b> &mdash; you are not an employee; you control how the work gets done.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Termination</b> &mdash; notice period you choose, plus payment for work performed through termination.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Limitation of liability</b> &mdash; your exposure is capped at fees paid or payable.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Indemnification</b> &mdash; each side stands behind its own breach and materials.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Governing law &amp; disputes</b> &mdash; your state (or custom), and a negotiate &rarr; mediate &rarr; arbitrate ladder.</span></li>
+        <li><span class="tick">&#10003;</span><span><b>Entire agreement &amp; signature blocks</b> &mdash; amendments in writing, e-signatures valid, clean signature lines.</span></li>
+      </ul>
+      <p class="sec-sub" style="margin-top:24px; margin-bottom:0;"><strong>Bundle extras:</strong> a <b>mutual NDA</b> (9 sections, exclusions, 3-year tail, injunctive relief) and a <b>statement of work</b> template that pulls your project fields into a contract-ready schedule with acceptance terms and change orders.</p>
+    </div>
+  </section>
+
+  <!-- ============ GENERATOR ============ -->
+  <section id="generator">
+    <div class="wrap">
+      <p class="eyebrow">Live tool</p>
+      <h2 class="sec-title">Build your contract now</h2>
+      <p class="sec-sub">The full preview is free &mdash; read every clause before you pay a cent. Your answers save automatically in this browser.</p>
+
+      <div class="gen-grid">
+
+        <!-- FORM -->
+        <form id="contractForm" class="form-card" novalidate>
+          <div class="form-head">
+            <h3>Project details</h3>
+            <span class="save-hint" id="saveHint">Saved</span>
+          </div>
+          <div class="form-body">
+
+            <fieldset>
+              <legend>You (the freelancer)</legend>
+              <div class="field">
+                <label for="f_name">Your full name *</label>
+                <input class="input" type="text" id="f_name" autocomplete="name" placeholder="Alex Rivera">
+              </div>
+              <div class="field">
+                <label for="f_business">Business name <span class="hint">(optional)</span></label>
+                <input class="input" type="text" id="f_business" placeholder="Rivera Design Co.">
+              </div>
+              <div class="field">
+                <label for="f_address">Your address <span class="hint">(street, city, state)</span></label>
+                <input class="input" type="text" id="f_address" autocomplete="street-address" placeholder="412 Pine St, Portland, OR 97204">
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Your client</legend>
+              <div class="field">
+                <label for="c_name">Client name or company *</label>
+                <input class="input" type="text" id="c_name" placeholder="Northwind Studio LLC">
+              </div>
+              <div class="field">
+                <label for="c_address">Client address <span class="hint">(optional but recommended)</span></label>
+                <input class="input" type="text" id="c_address" placeholder="88 Harbor Ave, Seattle, WA 98101">
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>The work</legend>
+              <div class="field">
+                <label for="project">Project / services description *</label>
+                <textarea class="input" id="project" rows="4" placeholder="Brand identity design for the spring product launch: logo concepts, color system, and usage guidelines."></textarea>
+              </div>
+              <div class="field">
+                <label for="deliverables">Deliverables <span class="hint">(one per line)</span></label>
+                <div id="deliverables">
+                  <div class="del-row">
+                    <input class="input" type="text" placeholder="e.g. Final logo files (SVG/PNG/PDF) — week 3" aria-label="Deliverable">
+                    <button class="btn-icon del-remove" type="button" title="Remove deliverable" aria-label="Remove deliverable">&times;</button>
+                  </div>
+                </div>
+                <button class="btn btn-ghost btn-sm" type="button" id="btnAddDeliv">+ Add deliverable</button>
+              </div>
+              <div class="row-2">
+                <div class="field">
+                  <label for="start_date">Start date</label>
+                  <input class="input" type="date" id="start_date">
+                </div>
+                <div class="field">
+                  <label for="end_date">End date <span class="hint">(or duration below)</span></label>
+                  <input class="input" type="date" id="end_date">
+                </div>
+              </div>
+              <div class="field">
+                <label for="duration_text">Or duration <span class="hint">(if no fixed end date)</span></label>
+                <input class="input" type="text" id="duration_text" placeholder="6 weeks from start date">
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Money</legend>
+              <div class="row-2">
+                <div class="field">
+                  <label for="rate_type">Rate type</label>
+                  <select class="input" id="rate_type">
+                    <option value="hourly">Hourly</option>
+                    <option value="fixed">Fixed project fee</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="rate_amount" id="rate_amount_label">Hourly rate</label>
+                  <input class="input" type="number" id="rate_amount" min="0" step="0.01" inputmode="decimal" placeholder="75">
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="field">
+                  <label for="currency">Currency</label>
+                  <select class="input" id="currency">
+                    <option value="USD" selected>USD &mdash; US dollar</option>
+                    <option value="EUR">EUR &mdash; euro</option>
+                    <option value="GBP">GBP &mdash; British pound</option>
+                    <option value="CAD">CAD &mdash; Canadian dollar</option>
+                    <option value="AUD">AUD &mdash; Australian dollar</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="pay_terms">Payment terms</label>
+                  <select class="input" id="pay_terms">
+                    <option value="net7">Net 7</option>
+                    <option value="net14" selected>Net 14</option>
+                    <option value="net30">Net 30</option>
+                    <option value="net50">50% upfront, 50% on delivery</option>
+                    <option value="upfront">100% upfront</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="field">
+                  <label for="late_fee">Late fee % / month</label>
+                  <input class="input" type="number" id="late_fee" min="0" max="10" step="0.5" value="1.5" inputmode="decimal">
+                </div>
+                <div class="field">
+                  <label for="kill_fee">Kill fee %</label>
+                  <input class="input" type="number" id="kill_fee" min="0" max="100" step="5" value="25" inputmode="decimal">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Scope &amp; protections</legend>
+              <div class="row-2">
+                <div class="field">
+                  <label for="revision_rounds">Revision rounds included</label>
+                  <input class="input" type="number" id="revision_rounds" min="0" max="10" step="1" value="2" inputmode="numeric">
+                </div>
+                <div class="field">
+                  <label for="notice_days">Termination notice (days)</label>
+                  <input class="input" type="number" id="notice_days" min="1" max="90" step="1" value="14" inputmode="numeric">
+                </div>
+              </div>
+              <div class="field">
+                <label class="check" for="confidentiality">
+                  <input type="checkbox" id="confidentiality" checked>
+                  <span>Include confidentiality clause <span class="hint">(recommended; the bundle NDA covers deeper secrecy needs)</span></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Law &amp; disputes</legend>
+              <div class="row-2">
+                <div class="field">
+                  <label for="law_state">Governing law</label>
+                  <select class="input" id="law_state">
+                    <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
+                    <option selected>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option>
+                    <option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+                    <option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option>
+                    <option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option>
+                    <option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+                    <option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option>
+                    <option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option>
+                    <option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+                    <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option>
+                    <option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option>
+                    <option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option>
+                    <option>Wisconsin</option><option>Wyoming</option><option>Washington, D.C.</option>
+                    <option value="other">Other (type it in)</option>
+                  </select>
+                </div>
+                <div class="field" id="law_other_wrap">
+                  <label for="law_other">Jurisdiction</label>
+                  <input class="input" type="text" id="law_other" placeholder="e.g. England and Wales">
+                </div>
+              </div>
+              <div class="field">
+                <label for="dispute">Dispute resolution</label>
+                <select class="input" id="dispute">
+                  <option value="med_arb" selected>Negotiate &rarr; mediation &rarr; arbitration</option>
+                  <option value="arb">Negotiate &rarr; arbitration</option>
+                  <option value="court">Negotiate &rarr; mediation &rarr; courts</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button class="btn btn-lg" type="button" id="btnGenerate">Generate contract</button>
+              <button class="btn btn-ghost" type="button" id="btnExample">Load example</button>
+              <button class="btn btn-ghost btn-sm" type="button" id="btnReset">Clear form</button>
+            </div>
+            <div class="form-meta-row">
+              <span>Draft autosaves in this browser.</span>
+              <a href="#faq">Questions? Read the FAQ.</a>
+            </div>
+          </div>
+        </form>
+
+        <!-- OUTPUT -->
+        <div class="output-panel" aria-live="polite">
+          <div class="tabs" role="tablist" aria-label="Generated documents">
+            <button class="tab-btn" role="tab" data-tab="agreement" aria-selected="true" type="button">Agreement</button>
+            <button class="tab-btn" role="tab" data-tab="nda" aria-selected="false" type="button">Mutual NDA <span class="tab-lock" style="display:none">BUNDLE</span></button>
+            <button class="tab-btn" role="tab" data-tab="sow" aria-selected="false" type="button">Statement of Work <span class="tab-lock" style="display:none">BUNDLE</span></button>
+          </div>
+
+          <div id="outputEmpty">
+            <div class="big" aria-hidden="true">&#9998;</div>
+            <p><strong>Your generated contract appears here.</strong><br>Fill in the form and press &ldquo;Generate contract.&rdquo; The complete text is free to read.</p>
+          </div>
+
+          <div id="outputWrap" style="display:none">
+            <div class="output-toolbar">
+              <button class="btn btn-ghost btn-sm" id="btnCopy" type="button">Copy text</button>
+              <button class="btn btn-ghost btn-sm is-gated" id="btnDlHtml" type="button">Download .html</button>
+              <button class="btn btn-ghost btn-sm is-gated" id="btnDlMd" type="button">Download .md</button>
+              <button class="btn btn-ghost btn-sm is-gated" id="btnDlTxt" type="button">Download .txt</button>
+              <button class="btn btn-sm is-gated" id="btnPdf" type="button">Download PDF (print)</button>
+              <button class="btn btn-ghost btn-sm" id="btnEdit" type="button" style="display:none">Edit text</button>
+            </div>
+            <div class="gate-notice" id="gateNotice"></div>
+
+            <div id="editorWrap">
+              <label class="sr-only" for="editor" style="position:absolute;left:-9999px">Contract text editor</label>
+              <textarea id="editor" spellcheck="false"></textarea>
+              <div class="editor-actions">
+                <button class="btn btn-sm" id="btnSaveEdit" type="button">Apply edits &amp; re-render</button>
+                <button class="btn btn-ghost btn-sm" id="btnCancelEdit" type="button">Cancel</button>
+              </div>
+            </div>
+
+            <div class="paper-scroll">
+              <div class="paper" id="paper"></div>
+            </div>
+
+            <div class="upsell" id="upsellCard">
+              <h4 id="upsellTitle">Download this contract, watermark-free</h4>
+              <p id="upsellCopy">You have the full text in front of you. Unlock once and keep the file forever &mdash; no subscription, no per-download fees.</p>
+              <div class="upsell-actions" id="upsellActions">
+                <button class="btn btn-white" type="button" data-buy="single">Unlock single contract &mdash; <span class="price-tag">$19</span></button>
+                <button class="btn" type="button" data-buy="bundle">Bundle: Agreement + NDA + SOW &mdash; $29</button>
+                <button class="btn btn-ghost btn-sm" type="button" data-open-modal>Already have a license key?</button>
+              </div>
+              <p class="upsell-fine">One-time payment via Stripe. Instant license key by email &mdash; enter it once and this browser unlocks permanently. <strong>Template tool, not legal advice.</strong></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="section-alt">
+    <div class="wrap">
+      <p class="eyebrow">Pricing</p>
+      <h2 class="sec-title">Pay once. No subscription. No per-download meter.</h2>
+      <p class="sec-sub">The preview is always free and always complete. You only pay to take the files with you.</p>
+      <div class="price-grid">
+        <div class="card price-card">
+          <h3>Single contract</h3>
+          <div class="price-num">$19 <small>one-time</small></div>
+          <div class="price-name">Freelance services agreement</div>
+          <ul class="price-feats">
+            <li><span class="tick">&#10003;</span> Full watermarked preview free, forever</li>
+            <li><span class="tick">&#10003;</span> Clean download: HTML, Markdown, plain text</li>
+            <li><span class="tick">&#10003;</span> Print-to-PDF with dedicated print stylesheet</li>
+            <li><span class="tick">&#10003;</span> Edit any clause, re-download as often as you like</li>
+            <li><span class="tick">&#10003;</span> 12&ndash;15 numbered articles, conditional clauses</li>
+            <li><span class="tick">&#10003;</span> Yours to reuse on future projects</li>
+          </ul>
+          <button class="btn" type="button" data-buy="single">Unlock for $19</button>
+        </div>
+        <div class="card price-card featured">
+          <span class="price-badge">Best value</span>
+          <h3>Freelance bundle</h3>
+          <div class="price-num">$29 <small>one-time</small></div>
+          <div class="price-name">Agreement + mutual NDA + statement of work</div>
+          <ul class="price-feats">
+            <li><span class="tick">&#10003;</span> Everything in Single</li>
+            <li><span class="tick">&#10003;</span> Mutual NDA &mdash; 9 sections, 3-year tail, exclusions</li>
+            <li><span class="tick">&#10003;</span> Statement-of-work template pulling your project fields</li>
+            <li><span class="tick">&#10003;</span> All three documents editable and downloadable</li>
+            <li><span class="tick">&#10003;</span> The paperwork set for a client from hello to final invoice</li>
+            <li><span class="tick">&#10003;</span> $14 less than buying documents separately elsewhere</li>
+          </ul>
+          <button class="btn" type="button" data-buy="bundle">Get the bundle for $29</button>
+        </div>
+      </div>
+      <p class="price-fine">Secure checkout via Stripe. You receive a license key by email; enter it on this page once and downloads unlock. <strong>Template tool, not legal advice &mdash; have an attorney review for your situation.</strong></p>
+    </div>
+  </section>
+
+  <!-- ============ GUIDE ============ -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="prose">
+        <p class="eyebrow">Guide</p>
+        <h2 class="sec-title">The freelance contract guide: what a professional agreement must include</h2>
+        <p class="toc-hint">Reading time ~5 minutes. Covers: freelance contract templates, independent contractor agreements, and payment terms that survive contact with real clients.</p>
+
+        <h3>Why freelancers get paid late &mdash; or never</h3>
+        <p>Non-payment is rarely a mystery. In most disputes between a freelancer and a client, both sides sincerely believe different things: the freelancer believes the third revision round was included in the fee, the client believes it wasn&rsquo;t; the freelancer believes the handoff date was the 15th, the client remembers the 30th. A freelance contract exists to make those beliefs irrelevant. When the scope, the deliverables, the deadlines, and the payment terms are in a signed document, the conversation shifts from &ldquo;he said, she said&rdquo; to &ldquo;section 3 says.&rdquo; That shift alone resolves most disagreements, because clients who might quietly deprioritize an unpaid invoice behave very differently when the terms are written, specific, and acknowledged by signature.</p>
+
+        <h3>What a freelance contract template should actually contain</h3>
+        <p>Search for a &ldquo;freelance contract template&rdquo; and you&rsquo;ll find everything from two-paragraph emails to 20-page law-firm documents. A useful freelance contract lives in between. It needs, at minimum: a clear description of the services; an itemized list of deliverables with dates; the fee structure (hourly or fixed) and currency; explicit payment terms; a stated number of included revision rounds with out-of-scope work handled by written change orders; a kill fee for mid-project cancellation; confidentiality protection; an intellectual property clause; independent contractor status; a termination mechanism with notice; and governing law. Everything else is refinement. The template ContractCraft generates contains all of these as numbered articles, with conditional sections included or removed based on your answers &mdash; turn confidentiality off, for example, and the numbering renumbers automatically with cross-references intact.</p>
+
+        <h3>Freelance contract vs. independent contractor agreement</h3>
+        <p>People use the terms interchangeably, and there is real overlap, but the emphasis differs. An <strong>independent contractor agreement</strong> is about the relationship: it establishes that you are not an employee, that you control how the work is performed, that you carry your own taxes and insurance, and that neither party can bind the other. A <strong>freelance services agreement</strong> is about the work: services, deliverables, revisions, and payment. If a client ever questions your status &mdash; or a tax agency does &mdash; the contractor-status clause is what matters. If a client ever questions the invoice, the services-and-payment articles are what matter. You need both halves, which is why the document ContractCraft generates opens as a freelance services agreement and contains a full independent contractor status article inside it.</p>
+
+        <h3>Payment terms that actually get you paid</h3>
+        <p>Payment terms are where contracts earn their keep. Three rules of thumb. First, shorter beats longer: Net 14 is a sensible default for freelance work, Net 7 for short engagements, and Net 30 is a concession you grant, not a starting point. Second, upfront money changes behavior: for fixed-fee projects, 50% before work begins is the single most effective anti-non-payment device available to a freelancer, because a client with a deposit at stake has skin in the game. Third, a late fee is a lever, not (usually) a revenue source: a simple interest rate per month on overdue amounts &mdash; 1.5% is common &mdash; both deters delay and gives you a principled, pre-agreed basis for the awkward conversation. ContractCraft bakes all three into its fees-and-payment article, including the right to pause work after ten days&rsquo; notice on an unpaid invoice.</p>
+
+        <h3>How to use this freelance contract generator</h3>
+        <p>Fill in the form with real project details &mdash; the more specific your services description and deliverables list, the stronger the document. Choose your rate type and terms; the defaults (Net 14, two revision rounds, 25% kill fee, 1.5% monthly late fee, IP on full payment) match what experienced freelancers commonly negotiate. Generate, then read the entire preview &mdash; it is free and complete, watermark included, because you should never sign text you haven&rsquo;t read. When you&rsquo;re ready, unlock once and download clean HTML, Markdown, or plain text, or print to PDF. After unlocking you can also edit the text directly in the browser before downloading. Your draft autosaves in your browser, so you can generate a fresh copy for every new client in minutes.</p>
+
+        <h3>Five mistakes that weaken an otherwise good contract</h3>
+        <ul>
+          <li><strong>Signing before reading.</strong> A template you didn&rsquo;t read protects you exactly as much as no contract when a clause contradicts your intention.</li>
+          <li><strong>Vague deliverables.</strong> &ldquo;Design work for the website&rdquo; invites scope creep. &ldquo;Final logo files (SVG/PNG/PDF), week 3&rdquo; ends arguments.</li>
+          <li><strong>Transferring IP too early.</strong> Never assign ownership before payment clears. IP-on-full-payment is the freelancer&rsquo;s strongest clause.</li>
+          <li><strong>No late-fee provision.</strong> After the fact you have no agreed basis for interest; before signing, you do.</li>
+          <li><strong>Letting the client&rsquo;s paper win by default.</strong> If a client sends their own agreement, compare it clause-by-clause against yours &mdash; especially liability caps, IP timing, and termination.</li>
+        </ul>
+
+        <h3>Is a generated contract enforceable?</h3>
+        <p>A contract&rsquo;s force comes from the agreement between the parties &mdash; offer, acceptance, consideration, and signatures &mdash; not from who typed it. Tools like this one exist in a well-established category: the same structure underlies the templates sold by legal-forms sites, contract platforms, and the thousand-copy marketplace listings freelancers buy every day. What a generator adds is consistency (numbered articles, defined terms, cross-references that renumber themselves) and speed. What it cannot do is know your jurisdiction&rsquo;s specific quirks or your deal&rsquo;s nuances. That is why the disclaimer stays attached to everything ContractCraft produces: this is a template tool, not legal advice. For high-value or unusual engagements, spend an hour with an attorney reviewing the generated draft &mdash; it makes that hour dramatically cheaper than drafting from scratch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="section-alt">
+    <div class="wrap">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="sec-title">Honest answers</h2>
+      <div class="faq">
+        <details>
+          <summary>Is ContractCraft legal advice?</summary>
+          <p class="faq-a">No. ContractCraft is a template tool, not a law firm and not legal advice. It produces a professionally structured freelance contract from information you provide, and it includes the same prominent disclaimer every serious competitor uses. For high-stakes engagements, have an attorney review your contract for your situation.</p>
+        </details>
+        <details>
+          <summary>Is a freelance contract legally binding?</summary>
+          <p class="faq-a">A contract becomes binding when both parties agree to its terms and sign it, whether on paper or electronically. ContractCraft produces the document; what makes it binding is the offer, acceptance, and consideration between you and your client. Clear terms and signatures are exactly why a written agreement beats a handshake.</p>
+        </details>
+        <details>
+          <summary>What is the difference between a freelance contract and an independent contractor agreement?</summary>
+          <p class="faq-a">They overlap heavily. An independent contractor agreement focuses on the working relationship (contractor status, tax responsibility, no employment benefits). A freelance services agreement focuses on the work itself (services, deliverables, revisions, payment). ContractCraft&rsquo;s document does both: it opens as a freelance services agreement and contains a full independent contractor status clause.</p>
+        </details>
+        <details>
+          <summary>Do I need a contract for small projects?</summary>
+          <p class="faq-a">Small projects go wrong too, and a short signed agreement costs you minutes to create. Most freelancers who get stiffed were not doing big deals &mdash; they just had nothing in writing. Use your judgment for trivial favors, but any engagement with real money and real deadlines deserves a contract.</p>
+        </details>
+        <details>
+          <summary>What payment terms should I use as a freelancer?</summary>
+          <p class="faq-a">Net 14 is a reasonable default; Net 7 for short projects. For larger fixed-fee work, 50% upfront is the single most effective protection against non-payment &mdash; clients who pay a deposit rarely disappear. ContractCraft also lets you add a monthly late fee, which both deters late payment and gives you a clean basis for charging it.</p>
+        </details>
+        <details>
+          <summary>Can I edit the contract after generating it?</summary>
+          <p class="faq-a">Yes. After unlocking, you can switch the document into an editable text view, adjust any clause, and download the edited version. The downloaded HTML, Markdown, and plain-text files are yours to keep and modify forever &mdash; there is no subscription and no per-download limit.</p>
+        </details>
+        <details>
+          <summary>What is a kill fee and why should my contract have one?</summary>
+          <p class="faq-a">A kill fee compensates you when a client cancels mid-project after you reserved time for them. ContractCraft&rsquo;s clause makes the client pay for all work performed plus a percentage (you choose; 25% is common) of the remaining fee. It filters out casual cancellations and keeps your calendar respected.</p>
+        </details>
+        <details>
+          <summary>Who owns the work if the client hasn&rsquo;t paid yet?</summary>
+          <p class="faq-a">Under ContractCraft&rsquo;s intellectual property clause, ownership of the final deliverables transfers to the client only upon full payment. Until then, you retain all rights and the client has no license to use the work. This single protection &mdash; IP assignment on payment &mdash; is the strongest anti-non-payment lever a freelance contract gives you.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:12px"><span class="brand-mark" aria-hidden="true">C</span> ContractCraft</a>
+        <p style="font-size:14.5px;color:var(--ink-2);max-width:420px;">Professional freelance contracts, generated from your details in minutes. Pay once, keep the files forever.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#generator">Contract generator</a></li>
+          <li><a href="#inside">What&rsquo;s inside</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#guide">Freelance contract guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer-box">
+      <b>Template tool, not legal advice.</b> ContractCraft provides self-help document templates generated from information you provide. It is not a law firm, does not provide legal advice or legal representation, and no attorney-client relationship is created by using it. Laws differ by jurisdiction and circumstances. <b>Have an attorney review any contract for your situation before relying on it.</b>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> ContractCraft. All rights reserved.</span>
+      <span>Documents are generated locally in your browser &mdash; your project details never leave your device.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ UNLOCK MODAL ============ -->
+<div class="modal-backdrop" id="unlockModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" id="btnCloseModal" type="button" aria-label="Close">&times;</button>
+    <h3 id="modalTitle">Unlock ContractCraft</h3>
+    <p class="modal-sub">Enter the email you paid with and the license key we sent you (looks like <code>A1B2-C3D4</code>). This browser unlocks instantly.</p>
+    <div class="field">
+      <label for="m_email">Email</label>
+      <input class="input" type="email" id="m_email" autocomplete="email" placeholder="you@example.com">
+    </div>
+    <div class="field">
+      <label for="m_key">License key</label>
+      <input class="input" type="text" id="m_key" placeholder="XXXX-XXXX" maxlength="12" autocapitalize="characters" autocomplete="off">
+    </div>
+    <button class="btn" style="width:100%" id="btnDoUnlock" type="button">Unlock</button>
+    <p class="modal-msg" id="modalMsg"></p>
+    <p class="modal-fine">Single keys unlock the Agreement. Bundle keys unlock the NDA and Statement of Work too. Lost your key? Reply to your receipt email and we&rsquo;ll resend it.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="printMount"></div>
+
+<script src="js/config.js"></script>
+<script src="js/license.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
