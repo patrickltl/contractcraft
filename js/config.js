@@ -3,8 +3,8 @@
    ------------------------------------------------------------
    OWNER TO-DO: paste your Stripe Payment Links below.
    1. In Stripe Dashboard -> Payment Links, create two links:
-      - "ContractCraft Single Unlock"   price $19.00 (one-time)
-      - "ContractCraft Bundle Unlock"   price $29.00 (one-time)
+      - "ContractCraft Single Unlock"   price HK$148.00 (one-time)
+      - "ContractCraft Bundle Unlock"   price HK$228.00 (one-time)
    2. In Stripe's "After payment" settings choose
       "Don't show confirmation page" -> custom URL, OR better:
       set the success URL to:
@@ -19,8 +19,8 @@ const SITE_CONFIG = {
   brandName: "ContractCraft",
   stripePaymentLinkSingle: "PASTE_STRIPE_LINK",
   stripePaymentLinkBundle: "PASTE_STRIPE_LINK",
-  priceSingle: "$19",
-  priceBundle: "$29",
+  priceSingle: "HK$148",
+  priceBundle: "HK$228",
   /* Optional extras (safe to leave as-is; update at launch): */
   siteUrl: "https://patrickltl.github.io/contractcraft",
   supportEmail: "patrickltl@hotmail.com"
