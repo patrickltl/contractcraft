@@ -17,8 +17,8 @@
    ============================================================ */
 const SITE_CONFIG = {
   brandName: "ContractCraft",
-  stripePaymentLinkSingle: "PASTE_STRIPE_LINK",
-  stripePaymentLinkBundle: "PASTE_STRIPE_LINK",
+  stripePaymentLinkSingle: "https://buy.stripe.com/dRmDR95oE0Magrd2cU7Vm04",
+  stripePaymentLinkBundle: "https://buy.stripe.com/bJedR97wM9iG2An3gY7Vm05",
   priceSingle: "HK$148",
   priceBundle: "HK$228",
   /* Optional extras (safe to leave as-is; update at launch): */
